@@ -1,12 +1,26 @@
 #!/usr/bin/python3
+"""
+pascal_triangle module
+"""
+
+
 def pascal_triangle(n):
+    """
+    the pascal_triangle function
+    takes an integer and returns
+    equivalent pascal triangle in form
+    of a list of lists
+    if the integer passed is less or
+    equal to zero, an empty
+    list is returned
+    """
     triangle = []
     if n <= 0:
         return triangle
     for i in range(1, n + 1):
         if i == 1:
             triangle.append([1])
-            triangle.append([1,1])
+            triangle.append([1, 1])
         else:
             temp = []
             idx = 0
