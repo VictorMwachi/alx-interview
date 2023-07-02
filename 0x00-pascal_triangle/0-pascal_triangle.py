@@ -15,11 +15,12 @@ def pascal_triangle(n):
     list is returned
     """
     triangle = []
-    if n <= 0:
+    if n < 0:
         return triangle
-    for i in range(1, n + 1):
-        if i == 1:
+    for i in range(n + 1):
+        if i == 0:
             triangle.append([1])
+        elif i == 1:
             triangle.append([1, 1])
         else:
             temp = []
