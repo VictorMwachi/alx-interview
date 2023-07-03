@@ -26,7 +26,7 @@ def pascal_triangle(n):
             temp = []
             idx = 0
             temp.append(1)
-            while idx <= len(triangle[-1]) - 2:
+            while idx + 1 <= len(triangle[-1]) - 2:
                 temp.append(triangle[-1][idx] + triangle[-1][idx + 1])
                 idx += 1
             temp.append(1)
