@@ -1,5 +1,5 @@
 def canUnlockAll(boxes):
-    l = len(boxes)
+    num = len(boxes)
     seen_boxes = set([0])
     unseen_boxes = set(boxes[0]).difference(set([0]))
     while len(unseen_boxes) > 0:
