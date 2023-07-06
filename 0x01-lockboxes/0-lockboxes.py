@@ -3,6 +3,7 @@
 contains function canUnlockall
 """
 
+
 def canUnlockAll(boxes):
     """determines if all boxes can be unlocked"""
     n = len(boxes)
