@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""
+contains function canUnlockall
+"""
+
 def canUnlockAll(boxes):
+    """determines if all boxes can be unlocked"""
     n = len(boxes)
     seen_boxes = set([0])
     unseen_boxes = set(boxes[0]).difference(set([0]))
