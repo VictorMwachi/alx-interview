@@ -3,7 +3,7 @@
 0. Minimum Operations
 """
 
-import Math
+import math
 
 
 def minOperations(n):
@@ -16,7 +16,7 @@ def minOperations(n):
     while n % 2 == 0:
         prime_list.append(2)
         n /= 2
-        for i in range(3, int(Math.sqrt(n)) + 1, 2):
+        for i in range(3, int(math.sqrt(n)) + 1, 2):
             while n % i == 0:
                 prime_list.append(i)
                 n /= i
