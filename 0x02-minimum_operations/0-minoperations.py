@@ -23,4 +23,4 @@ def minOperations(n):
             n /= i
     if n > 2:
         prime_list.append(n)
-    return sum(prime_list)
+    return int(sum(prime_list))
