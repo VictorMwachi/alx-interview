@@ -20,6 +20,6 @@ def minOperations(n):
             while n % i == 0:
                 prime_list.append(i)
                 n /= i
-        if n > 2:
-            prime_list.append(n)
+    if n > 2:
+        prime_list.append(n)
     return sum(prime_list)
