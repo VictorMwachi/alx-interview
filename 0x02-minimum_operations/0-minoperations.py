@@ -13,13 +13,14 @@ def minOperations(n):
     """
     if n < 2:
         return 0
+    prime_list = []
     while n % 2 == 0:
         prime_list.append(2)
         n /= 2
-        for i in range(3, int(math.sqrt(n)) + 1, 2):
-            while n % i == 0:
-                prime_list.append(i)
-                n /= i
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        while n % i == 0:
+            prime_list.append(i)
+            n /= i
     if n > 2:
         prime_list.append(n)
     return sum(prime_list)
