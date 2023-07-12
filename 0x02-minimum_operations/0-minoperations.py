@@ -21,5 +21,5 @@ def minOperations(n):
                 prime_list.append(i)
                 n /= i
         if n > 2:
-            prime_list.append(i)
+            prime_list.append(n)
     return sum(prime_list)
