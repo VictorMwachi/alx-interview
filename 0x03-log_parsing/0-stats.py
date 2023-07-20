@@ -16,14 +16,15 @@ def print_stat(dict_scode, file_size):
 acc_file_size = 0
 code = 0
 counter = 0
-dict_stat_code = {"200": 0,
-           "301": 0,
-           "400": 0,
-           "401": 0,
-           "403": 0,
-           "404": 0,
-           "405": 0,
-           "500": 0}
+dict_stat_code = {
+                  "200": 0,
+                  "301": 0,
+                  "400": 0,
+                  "401": 0,
+                  "403": 0,
+                  "404": 0,
+                  "405": 0,
+                  "500": 0}
 
 for line in sys.stdin:
     log_arg_list = line.split()
