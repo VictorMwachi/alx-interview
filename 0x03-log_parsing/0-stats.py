@@ -27,18 +27,19 @@ dict_stat_code = {
                   "405": 0,
                   "500": 0}
 
-for line in sys.stdin:
-    log_arg_list = line.split()
-    log_reversed = log_arg_list[::-1]
-    if len(log_reversed) > 2:
-        counter += 1
-        if counter <= 10:
-            acc_file_size += int(log_reversed[0])  # file size
-            code = log_reversed[1]  # status code
-            if (code in dict_stat_code.keys()):
-                dict_stat_code[code] += 1
-                if (counter == 10):
-                    print_msg(dict_stat_code, acc_file_size)
-                    counter = 0
+try:
+    for line in sys.stdin:
+        log_arg_list = line.split()
+        log_reversed = log_arg_list[::-1]
+        if len(log_reversed) > 2:
+            counter += 1
+            if counter <= 10:
+                acc_file_size += int(log_reversed[0])  # file size
+                code = log_reversed[1]  # status code
+                if (code in dict_stat_code.keys()):
+                    dict_stat_code[code] += 1
+                    if (counter == 10):
+                        print_msg(dict_stat_code, acc_file_size)
+                        counter = 0
 finally:
     print_msg(dict_stat_code, acc_file_size)
