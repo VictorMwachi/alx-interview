@@ -7,6 +7,7 @@ import sys
 
 
 def print_stat(dict_scode, file_size):
+    """prints filesize and status code count"""
     print("File size: {}".format(file_size))
     for code, count in sorted(dict_scode.items()):
         if count != 0:
