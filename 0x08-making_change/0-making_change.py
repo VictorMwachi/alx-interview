@@ -16,6 +16,6 @@ def makeChange(coins, total):
             total -= coins[pile]
             change += 1
         pile -= 1
-    if total > 1:
+    if total != 1:
         return -1
     return change
