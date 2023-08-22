@@ -9,6 +9,10 @@ def makeChange(coins, total):
   if coins.len() <= 0:
     return -1
   coins.sort()
-  coin.reverse()
+  pile = len(coins)
   change = 0
-    
+   while(pile >= 0):
+     while(coins[pile] < total):
+       total -= coins[pile]
+       change += 1
+    pile -= 1
