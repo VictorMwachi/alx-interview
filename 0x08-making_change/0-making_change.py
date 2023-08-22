@@ -12,8 +12,11 @@ def makeChange(coins, total):
     pile = len(coins)-1
     change = 0
     while(pile >= 0):
-        while(coins[pile] < total):
-            total -= coins[pile]
-            change += 1
-        pile -= 1
+        if(coins[pile] < total):
+            while(coins[pile] < total):
+                total -= coins[pile]
+                change += 1
+            pile -= 1
+        else:
+            return -1
     return change
